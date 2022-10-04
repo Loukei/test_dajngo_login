@@ -20,8 +20,9 @@
   - [x] create superuser for project
 - [x] use django admin to create some test user
 - [ ] Create user profile page to show user message
-  - [ ] `profile(username)` in view
-  - [ ] create `profile.html` template
+  - [x] create `profile.html` template
+  - [x] `profile(username)` in view
+  - [ ] add permission control to `profile(username)` function
 - [ ] Create user login page
   - [ ] view
   - [ ] template
