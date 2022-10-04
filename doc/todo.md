@@ -8,10 +8,11 @@
 - [x] Create views.py in mysite
   - [x] a "Hello world" http response
 - [ ] Create home page template
-  - [ ] create "template" folder for project and change "settings.py"
+  - [x] create "template" folder for project and change "settings.py"
   - [ ] create "static" folder for "js" and "css" file
-  - [ ] create "base.html"
-  - [ ] create "index.html" inherit "base.html"
+  - [x] create "base.html"
+  - [x] create "index.html" inherit "base.html"
+  - [x] create `index()` in view and change "urls.py"
 - [ ] Setup SQL server to django
   - [ ] create superuser for project
   - [ ] run django migration command
