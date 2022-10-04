@@ -7,5 +7,8 @@
 {% block base_body %}
 <h1> User profile </h1>
 
-{{ user }}
+<p>username: {{ user.username }}</p>
+<p>email: {{ user.email }}</p>
+<p>firstname: {{ user.firstname }}</p>
+<p>lastname: {{ user.lastname }}</p>
 {% endblock %}

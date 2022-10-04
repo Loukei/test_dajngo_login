@@ -19,11 +19,12 @@
   - [ ] go to SQL server to check if default user model has been created
   - [x] create superuser for project
 - [x] use django admin to create some test user
-- [ ] Create user profile page to show user message
+- [x] Create user profile page to show user message
   - [x] create `profile.html` template
   - [x] `profile(username)` in view
-  - [ ] add permission control to `profile(username)` function
+  - [x] add permission control to `profile(username)` function
 - [ ] Create user login page
+  - [ ] create a custom login form for bootstarpe class
   - [ ] view
   - [x] template
 - [ ] Create user logout page

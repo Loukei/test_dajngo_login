@@ -2,6 +2,7 @@ from multiprocessing import context
 from django.http import HttpRequest, HttpResponse, Http404
 from django.template import loader as template_loader, TemplateDoesNotExist
 from django.urls import reverse
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView
 
@@ -17,10 +18,10 @@ def index(request:HttpRequest):
         raise Http404("Index page does not found")
     return HttpResponse(content=template.render(context=context,request=request))
 
+@login_required(login_url='login')
 def profile(request:HttpRequest, username:str):
     """
     Show user profile in page
-    #TODO: add login control
     """
     # check user
     current_user:User = request.user
@@ -32,6 +33,7 @@ def profile(request:HttpRequest, username:str):
         raise Http404(f"you don't have permission to this page.")
     
 class CustomLoginView(LoginView):
+    #TODO: use custom bootstarpe login form
     template_name: str = "mysite/login.html"
 
     def get_success_url(self) -> str:
