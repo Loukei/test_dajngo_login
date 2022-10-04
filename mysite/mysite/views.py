@@ -1,9 +1,9 @@
 from multiprocessing import context
 from django.http import HttpRequest, HttpResponse, Http404
 from django.template import loader as template_loader, TemplateDoesNotExist
+from django.urls import reverse
 from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView
-from django.contrib.auth.forms import AuthenticationForm
 
 def hello(request:HttpRequest):
     "Simply show hello for test"
@@ -30,8 +30,10 @@ def profile(request:HttpRequest, username:str):
         return HttpResponse(content=t.render(context=context,request=request))
     else:
         raise Http404(f"you don't have permission to this page.")
-
+    
 class CustomLoginView(LoginView):
-    #TODO: next_page needs username parameter
     template_name: str = "mysite/login.html"
-    next_page  = "profile"
+
+    def get_success_url(self) -> str:
+        "Override function to redirect"
+        return self.get_redirect_url() or reverse(viewname=profile, kwargs={"username": self.request.user.username})
