@@ -5,8 +5,8 @@
 
 ## TODO
 
-- [ ] Create views.py in mysite
-  - [ ] a "Hello world" http response
+- [x] Create views.py in mysite
+  - [x] a "Hello world" http response
 - [ ] Create home page template
   - [ ] create "template" folder for project and change "settings.py"
   - [ ] create "static" folder for "js" and "css" file
