@@ -6,4 +6,23 @@
 ## TODO
 
 - [ ] Create views.py in mysite
+  - [ ] a "Hello world" http response
+- [ ] Create home page template
+  - [ ] create "template" folder for project and change "settings.py"
+  - [ ] create "static" folder for "js" and "css" file
+  - [ ] create "base.html"
+  - [ ] create "index.html" inherit "base.html"
 - [ ] Setup SQL server to django
+  - [ ] create superuser for project
+  - [ ] run django migration command
+  - [ ] go to SQL server to check if default user model has been created
+- [ ] use django admin to create some test user
+- [ ] Create user profile page to show user message
+  - [ ] `profile(username)` in view
+  - [ ] create `profile.html` template
+- [ ] Create user login page
+  - [ ] view
+  - [ ] template
+- [ ] Create user logout page
+  - [ ] view
+  - [ ] template
