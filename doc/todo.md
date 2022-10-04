@@ -25,7 +25,7 @@
   - [ ] add permission control to `profile(username)` function
 - [ ] Create user login page
   - [ ] view
-  - [ ] template
+  - [x] template
 - [ ] Create user logout page
   - [ ] view
   - [ ] template

@@ -2,6 +2,8 @@ from multiprocessing import context
 from django.http import HttpRequest, HttpResponse, Http404
 from django.template import loader as template_loader, TemplateDoesNotExist
 from django.contrib.auth.models import User
+from django.contrib.auth.views import LoginView
+from django.contrib.auth.forms import AuthenticationForm
 
 def hello(request:HttpRequest):
     "Simply show hello for test"
@@ -28,4 +30,8 @@ def profile(request:HttpRequest, username:str):
         return HttpResponse(content=t.render(context=context,request=request))
     else:
         raise Http404(f"you don't have permission to this page.")
-    
+
+class CustomLoginView(LoginView):
+    #TODO: next_page needs username parameter
+    template_name: str = "mysite/login.html"
+    next_page  = "profile"
