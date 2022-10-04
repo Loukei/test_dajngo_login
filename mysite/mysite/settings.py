@@ -80,6 +80,16 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+    # "default": {
+    #     "ENGINE": "mssql",
+    #     "NAME": "SQLEXPRESS",
+    #     "USER": "Developer",
+    #     "PASSWORD": "12345678",
+    #     "HOST": "127.0.0.1",
+    #     "PORT": "1433",
+    #     "OPTIONS": {"driver": "ODBC Driver 17 for SQL Server", 
+    #     },
+    # },
 }
 
 
@@ -119,10 +129,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = [
-    BASE_DIR.joinpath('static'),
-    BASE_DIR.joinpath('templates/static'),
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR.joinpath('static'),
+#     BASE_DIR.joinpath('templates/static'),
+# ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
