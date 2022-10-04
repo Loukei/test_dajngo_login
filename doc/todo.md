@@ -15,10 +15,10 @@
   - [x] create `index()` in view and change "urls.py"
 - [ ] Setup SQL server to django
   - [x] install `mssql-django`
-  - [ ] run django migration command
+  - [x] run django migration command
   - [ ] go to SQL server to check if default user model has been created
-  - [ ] create superuser for project
-- [ ] use django admin to create some test user
+  - [x] create superuser for project
+- [x] use django admin to create some test user
 - [ ] Create user profile page to show user message
   - [ ] `profile(username)` in view
   - [ ] create `profile.html` template
